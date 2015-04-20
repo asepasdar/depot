@@ -1,0 +1,83 @@
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
+ind:
+
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit:      "Rp"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+#END:currency
+
+#START:model
+#START:errors
+  activerecord:
+#END:errors
+#END:model
+#START:errors
+    errors:
+      messages:
+        inclusion: "tidak termasuk dalam list"
+        blank:     "tidak diperbolehkan kosong"
+#START:errors
+  errors:
+    template:
+      body:        "Terjadi kesalahan pada field berikut:"
+      header:       
+        one:       "1 kesalahan menghambat %{model} ini di save"
+        other:     "%{count} kesalahan menghambat %{model} ini di save"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      title:       "Pragmatic Bookshelf"
+      home:        "Beranda"
+      questions:   "Pertanyaan"
+      news:        "Berita"
+      contact:     "Kontak"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title:       "Keranjang Anda"
+      empty:       "Kosongkan"
+      checkout:    "Selesai"
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "Katalog"
+      add_html:    "Tambahkan"
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend:       "Masukan data diri anda"
+    form:
+      name:         "Nama"
+      address_html: "Alamat"
+      email:        "E-mail"
+      pay_type:     "Pembayaran"
+      pay_prompt_html: "Pilih metode"
+      submit:       "Pesan"
+#END:checkout
+
+#START:flash
+  thanks:          "Terima kasih atas pemesanan anda"
+#END:flash
